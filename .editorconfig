@@ -9,7 +9,3 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
-
-[{*.{coffee,cson,yml,yaml,jade,pug,rb,gemspec},{package,bower}.json,Rakefile,Gemfile}]
-indent_style = space
-indent_size = 2
