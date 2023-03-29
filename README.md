@@ -4,7 +4,7 @@
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/git-aliases-plus.svg?style=flat-square)](https://www.powershellgallery.com/packages/git-aliases-plus/)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/git-aliases-plus.svg?style=flat-square)](https://www.powershellgallery.com/packages/git-aliases-plus/)
 
-A fork of [ `powershell-git-aliases` ](https://github.com/gluons/powershell-git-aliases) that adds all missing aliases, see: https://github.com/gluons/powershell-git-aliases/issues/32, https://github.com/gluons/powershell-git-aliases/issues/38, ...and more.
+A fork of [ `powershell-git-aliases` ](https://github.com/gluons/powershell-git-aliases) that adds all missing aliases, see: https://github.com/gluons/powershell-git-aliases/issues/32, https://github.com/gluons/powershell-git-aliases/issues/38, [...and more](https://github.com/codyduong/powershell-git-aliases-plus/commit/042eaaa1473ead670b25fb8fd4259a92d3d02082#diff-ad42a217095f5a9cc3960e238d16bc9b5cf3ab238b9a6bcd28bf2c295cdde660).
 
 It also adds an support for a [thefuck](https://github.com/nvbn/thefuck) rule to allow `fuck` to work on aliased commands
 
