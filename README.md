@@ -58,4 +58,4 @@ Import-Module Posh-Git -arg 0,0,1
 
 If you would like your aliases to still be corrected with the `fuck` command, 
 copy [git-aliases.py](./integrations/thefuck/rules/git-aliases.py) from [integrations/thefuck/rules](./integrations/thefuck/)
-into [$HOME/.config/thefuck/rules].
+into `$HOME/.config/thefuck/rules`.
