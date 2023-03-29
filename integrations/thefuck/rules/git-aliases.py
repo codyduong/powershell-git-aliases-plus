@@ -193,7 +193,7 @@ def _generate_unalias_command(command):
     # replace the corrected value
     if len(git_alias_corrections) == 0:
         new_command_parts = []
-        rules = None
+        rules = []
         for part in command.script_parts:
             if part in ALIAS_LIST.keys():
                 new_command_parts.append(ALIAS_LIST[part][0])
@@ -203,7 +203,7 @@ def _generate_unalias_command(command):
         new_command = Command.from_raw_script(new_command_parts)
         # go through other rule matches and get_new_command
         for rule in rules:
-            if rule[0](new_command):
+            if not rule[0](new_command):
                 continue
             unaliased_fixed_command = rule[1](new_command)
             # TODO put back the alias if possible
