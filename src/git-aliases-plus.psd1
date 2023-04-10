@@ -4,7 +4,7 @@
 RootModule = 'git-aliases-plus.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.1'
 
 # ID used to uniquely identify this module
 GUID = '4e36d89f-b9e8-43a3-b7b1-ddb0427d9e08'

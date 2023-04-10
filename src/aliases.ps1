@@ -549,7 +549,7 @@ function gsw {
 function gswc {
 	git switch --create $args
 }
-function gwsm {
+function gswm {
 	$MainBranch = Get-Git-MainBranch
 
 	git switch $MainBranch $args
