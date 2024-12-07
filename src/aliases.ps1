@@ -377,8 +377,11 @@ function gpd {
 	git push --dry-run $args
 }
 function gpf {
-	# todo --force-if-includes
-	git push --force-with-lease $args
+	if ([semver](Get-GitSemVer) -ge [semver]"2.30") {
+		git push --force-with-lease --force-if-includes $args
+	} else {
+		git push --force-with-lease $args
+	}
 }
 function gpf! {
 	git push --force $args
