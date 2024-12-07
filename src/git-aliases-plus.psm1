@@ -185,7 +185,6 @@ $FunctionsToExport = @(
 	'gup',
 	'gupa',
 	'gupv',
-	'gupa',
 	'gupav',
 	'gupom',
 	'gupomi',

@@ -49,9 +49,6 @@ function gba {
 function gbd {
 	git branch --delete $args
 }
-function gbd {
-	git branch -d $args
-}
 function gbda {
 	$MainBranch = Get-Git-MainBranch
 	$MergedBranchs = $(git branch --merged | Select-String "^(\*|\s*($MainBranch|develop|dev)\s*$)" -NotMatch).Line
@@ -469,9 +466,6 @@ function grrm {
 function grs {
 	git restore $args
 }
-function grst {
-	git restore --staged $args
-}
 function grset {
 	git remote set-url $args
 }
@@ -604,9 +598,6 @@ function gupa {
 }
 function gupv {
 	git pull --rebase -v $args
-}
-function gupa {
-	git pull --rebase --autostash $args
 }
 function gupav {
 	git pull --rebase --autostash --verbose $args
