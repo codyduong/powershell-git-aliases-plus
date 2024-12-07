@@ -31,6 +31,8 @@ $FunctionsToExport = @(
 	'gbs',
 	'gbsb',
 	'gbsg',
+	'gbsn',
+	'gbso'
 	'gbsr',
 	'gbss',
 	'gc',

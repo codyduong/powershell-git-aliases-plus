@@ -86,6 +86,12 @@ function gbsb {
 function gbsg {
 	git bisect good $args
 }
+function gbsn {
+	git bisect new $args
+}
+function gbso {
+	git bisect old $args
+}
 function gbsr {
 	git bisect reset $args
 }
@@ -266,7 +272,9 @@ function ggp {
 
 	git push origin $CurrentBranch
 }
-# todo ggpnp
+function ggpnp {
+	ggl; ggp $args
+}
 # todo ggu
 function ggsup {
 	$CurrentBranch = Get-Git-CurrentBranch
@@ -671,9 +679,6 @@ function gamscp {
 
 
 # todo grename
-function ggpnp {
-	ggl; ggp $args
-}
 function gprom {
 	$MainBranch = Get-Git-MainBranch
 
