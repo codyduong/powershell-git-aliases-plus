@@ -181,6 +181,7 @@ $FunctionsToExport = @(
 	'gunignore',
 	'gunwip',
 	'gup',
+	'gupa',
 	'gupv',
 	'gupa',
 	'gupav',
@@ -199,6 +200,10 @@ $FunctionsToExport = @(
 	'gwtls',
 	'gwtmv',
 	'gwtrm'
+	'ggl',
+	'ggp',
+	'ggpnp',
+	'gprom'
 )
 
 Export-ModuleMember -Function $FunctionsToExport

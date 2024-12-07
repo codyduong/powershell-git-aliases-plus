@@ -49,6 +49,9 @@ function gba {
 function gbd {
 	git branch --delete $args
 }
+function gbd {
+	git branch -d $args
+}
 function gbda {
 	$MainBranch = Get-Git-MainBranch
 	$MergedBranchs = $(git branch --merged | Select-String "^(\*|\s*($MainBranch|develop|dev)\s*$)" -NotMatch).Line
@@ -455,6 +458,9 @@ function grrm {
 function grs {
 	git restore $args
 }
+function grst {
+	git restore --staged $args
+}
 function grset {
 	git remote set-url $args
 }
@@ -579,6 +585,9 @@ function gunwip {
 function gup {
 	git pull --rebase $args
 }
+function gupa {
+	git pull --rebase --autostash $args
+}
 function gupv {
 	git pull --rebase -v $args
 }
@@ -625,6 +634,7 @@ function gwip {
 function gwt {
 	git worktree $args
 }
+<<<<<<< HEAD
 function gwta {
 	git worktree add $args
 }
@@ -659,3 +669,14 @@ function gamscp {
 
 
 # todo grename
+||||||| 250c1a8
+=======
+function ggpnp {
+	ggl; ggp $args
+}
+function gprom {
+	$MainBranch = Get-Git-MainBranch
+
+	git pull --rebase origin $MainBranch $args
+}
+>>>>>>> upstream/master
