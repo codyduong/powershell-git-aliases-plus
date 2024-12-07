@@ -634,7 +634,6 @@ function gwip {
 function gwt {
 	git worktree $args
 }
-<<<<<<< HEAD
 function gwta {
 	git worktree add $args
 }
@@ -669,8 +668,6 @@ function gamscp {
 
 
 # todo grename
-||||||| 250c1a8
-=======
 function ggpnp {
 	ggl; ggp $args
 }
@@ -679,4 +676,3 @@ function gprom {
 
 	git pull --rebase origin $MainBranch $args
 }
->>>>>>> upstream/master
