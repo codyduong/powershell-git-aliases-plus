@@ -133,3 +133,28 @@ function Get-Git-Aliases ([string] $Alias) {
 
 	return Format-Table -InputObject $aliases -AutoSize -Wrap -Property $cols
 }
+
+function Get-SemVer {
+	[OutputType([semver])]
+	param (
+		[Parameter(Mandatory)]
+		[string]$InputString
+	)
+
+	# Regular expression to match SemVer format (major.minor.patch)
+	$semVerRegex = '(?<Major>\d+)\.(?<Minor>\d+)\.(?<Patch>\d+)(?:-(?<Prerelease>[a-zA-Z0-9\.-]+))?(?:\+(?<BuildMetadata>[a-zA-Z0-9\.-]+))?'
+
+	# Attempt to match the first SemVer in the input string
+	if ($InputString -match $semVerRegex) {
+		return $Matches[0]
+	} else {
+		return $null
+	}
+}
+
+function Get-GitSemVer {
+	[OutputType([semver])]
+	param ()
+
+	return Get-SemVer "$(git --version)"
+}

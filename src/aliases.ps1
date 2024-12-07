@@ -221,8 +221,11 @@ function gf {
 	git fetch $args
 }
 function gfa {
-	# todo --jobs
-	git fetch --all --prune $args
+	if ([semver](Get-GitSemVer) -ge [semver]"2.8") {
+		git fetch --all --tags --prune --jobs=10 $args
+	} else {
+		git fetch --all --tags --prune $args
+	}
 }
 function gfo {
 	git fetch origin $args
