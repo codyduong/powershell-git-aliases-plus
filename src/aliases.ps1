@@ -519,8 +519,11 @@ function gst {
 
 
 function gsta {
-	# todo git stash push
-	git stash save $args
+	if ([semver](Get-GitSemVer) -ge [semver]"2.13") {
+		git stash push $args
+	} else {
+		git stash save $args
+	}
 }
 
 
