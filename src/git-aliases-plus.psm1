@@ -8,6 +8,7 @@ $FunctionsToExport = @(
 	# grename <old> <new>,
 	# Get-Git-Current-User-Name,
 	# Get-Git-Current-User-Email,
+	'Get-GitSemVer',
 	'g',
 	'ga',
 	'gaa',
