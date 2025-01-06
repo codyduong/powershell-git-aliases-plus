@@ -88,7 +88,9 @@ function Get-Git-Aliases ([string] $Alias) {
 		'Get-Git-CurrentBranch',
 		'Remove-Alias',
 		'Format-AliasDefinition',
-		'Get-Git-Aliases'
+		'Get-Git-Aliases',
+		'Get-SemVer',
+		'Get-GitSemVer'
 	)
 	$aliases = Get-Command -Module git-aliases | Where-Object { $_ -notin $blacklist }
 

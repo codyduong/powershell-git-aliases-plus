@@ -259,6 +259,11 @@ function ggfl {
 
 	git push --force-with-lease origin $CurrentBranch
 }
+function ggpull {
+	$CurrentBranch = Get-Git-CurrentBranch
+
+	git pull origin $CurrentBranch
+}
 function ggl {
 	$CurrentBranch = Get-Git-CurrentBranch
 
@@ -392,6 +397,35 @@ function gpod {
 }
 function gpr {
 	git pull --rebase $args
+}
+function gpra {
+	git pull --rebase --autostash $args
+}
+function gprv {
+	git pull --rebase -v $args
+}
+function gprav {
+	git pull --rebase --autostash -v $args
+}
+function gprom {
+	$MainBranch = Get-Git-MainBranch
+
+	git pull --rebase origin $MainBranch $args
+}
+function gpromi {
+	$MainBranch = Get-Git-MainBranch
+
+	git pull --rebase=interactive origin $MainBranch $args
+}
+function gprum {
+	$MainBranch = Get-Git-MainBranch
+
+	git pull --rebase upstream $MainBranch $args
+}
+function gprumi {
+	$MainBranch = Get-Git-MainBranch
+
+	git pull --rebase=interactive upstream $MainBranch $args
 }
 function gpu {
 	git push upstream $args
@@ -591,23 +625,29 @@ function gunwip {
 	git reset HEAD~1
 }
 function gup {
+	# todo deprecate
 	git pull --rebase $args
 }
 function gupa {
+	# todo deprecate
 	git pull --rebase --autostash $args
 }
 function gupv {
+	# todo deprecate
 	git pull --rebase -v $args
 }
 function gupav {
+	# todo deprecate
 	git pull --rebase --autostash --verbose $args
 }
 function gupom {
+	# todo deprecate
 	$MainBranch = Get-Git-MainBranch
 
 	git pull --rebase origin $MainBranch $args
 }
 function gupomi {
+	# todo deprecate
 	$MainBranch = Get-Git-MainBranch
 
 	git pull --rebase=interactive origin $MainBranch $args
