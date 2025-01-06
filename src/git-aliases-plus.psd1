@@ -35,7 +35,7 @@ PrivateData = @{
 		ProjectUri = 'https://github.com/codyduong/powershell-git-aliases-plus'
 
 		# Prerelease version
-		Prerelease = 'rc.1'
+		# Prerelease = 'rc.1'
 	}
 
 }
